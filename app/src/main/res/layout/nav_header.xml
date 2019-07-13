@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WhiteBlue"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="top"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/userProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        >
+
+        <TextView
+            android:id="@+id/namaPengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pengguna"
+            android:layout_margin="8dp"
+            android:textSize="14pt"
+            android:textColor="@color/blackFont"
+            android:layout_gravity="left"
+            android:gravity="left"/>
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post: 3 Post"
+            android:layout_margin="8dp"
+            android:textColor="@color/blackFont"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:textSize="5pt" />
+        <TextView
+            android:id="@+id/pesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan: 0 Pesan Baru"
+            android:layout_margin="8dp"
+            android:textColor="@color/blackFont"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:textSize="5pt"/>
+        <TextView
+            android:id="@+id/pemberitahuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemberitahuan: 0"
+            android:layout_margin="8dp"
+            android:textColor="@color/blackFont"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:textSize="5pt"/>
+
+    </LinearLayout>
+
+</LinearLayout>

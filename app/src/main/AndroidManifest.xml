@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yonariva.sponsorship">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ActivityEditAcara"></activity>
+        <activity android:name=".ActivityChatRoom" />
+        <activity android:name=".ActivityUploadGambarProfile" />
+        <activity android:name=".ActivityChangePassword" />
+        <activity android:name=".ActivityEditProfile" />
+        <activity android:name=".ActivityDaftarBaru" />
+        <activity android:name=".ActivityLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityMainMenu" />
+        <activity
+            android:name=".ActivityPost"
+            android:label="@string/title_activity_post"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActivityDetailProfile"
+            android:label="@string/title_activity_detail_profile"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ActivityBuatAcara" />
+    </application>
+
+</manifest>

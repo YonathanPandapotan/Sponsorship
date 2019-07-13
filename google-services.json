@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "266363530930",
+    "firebase_url": "https://sponsorship-4a08d.firebaseio.com",
+    "project_id": "sponsorship-4a08d",
+    "storage_bucket": "sponsorship-4a08d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266363530930:android:e23d670d2719d401",
+        "android_client_info": {
+          "package_name": "com.example.yonariva.sponsorship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266363530930-jbm6f21sf2r05d1qf3bq6f76982g8po4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yonariva.sponsorship",
+            "certificate_hash": "efb90f39fc3cc8f882669e6a6e105f3d6c845446"
+          }
+        },
+        {
+          "client_id": "266363530930-09r2k2tl32qr5qkmo945h13qr7g377s8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yonariva.sponsorship",
+            "certificate_hash": "40a0445e7fd3481f45619935a3125258cab1a45c"
+          }
+        },
+        {
+          "client_id": "266363530930-jf655ae5euaikj5h8gqldo704p5cs998.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqeOw8tnUqVptBUIO3VPYaJKz4Vi9Ycac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266363530930-jf655ae5euaikj5h8gqldo704p5cs998.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

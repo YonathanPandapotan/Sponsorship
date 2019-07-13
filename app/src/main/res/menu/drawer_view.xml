@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menuPertama"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"
+            android:icon="@drawable/profile"/>
+        <item
+            android:id="@+id/pesan"
+            android:icon="@drawable/ic_sms_white_48dp"
+            android:title="Chat" />
+        <item
+            android:id="@+id/pemberitahuan"
+            android:icon="@drawable/ic_notifications_none_black_48dp"
+            android:title="Pemberitahuan" />
+    </group>
+
+    <group android:id="@+id/menuKedua"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/pengaturanAkun"
+            android:title="Pengaturan Akun" />
+        <item
+            android:id="@+id/gantiPass"
+            android:title="Ganti Password" />
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+    </group>
+</menu>

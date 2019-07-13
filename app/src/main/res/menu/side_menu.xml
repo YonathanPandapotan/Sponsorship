@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!-- complex menu item to set text style -->
+    <item
+        android:id="@+id/uploadFoto"
+        android:title="Upload Foto"
+        app:showAsAction="never|withText"
+        android:icon="@color/colorPrimary"
+        android:orderInCategory="3"/>
+
+    <item
+        android:id="@+id/deleteFoto"
+        android:title="Hapus foto ini"
+        app:showAsAction="never|withText"
+        android:icon="@color/blackFont"
+        android:orderInCategory="3"/>
+
+</menu>
