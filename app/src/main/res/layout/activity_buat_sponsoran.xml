@@ -29,7 +29,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:text="Edit acara anda"
+                    android:text="Buat Acara"
                     android:textColor="@color/White"
                     android:layout_width="wrap_content"
                     android:textSize="10pt"
@@ -450,14 +450,12 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Selesai"
+                    android:text="Buat Acara!"
                     android:id="@+id/btn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/horZon" />
-
-
 
             </android.support.constraint.ConstraintLayout>
         </ScrollView>

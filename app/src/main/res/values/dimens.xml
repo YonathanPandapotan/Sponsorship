@@ -2,6 +2,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="imageview_width">120dp</dimen>
     <dimen name="imageview_height">120dp</dimen>
-    <dimen name="standard_55">56dp</dimen>
-    <dimen name="standard_105">112dp</dimen>
+    <dimen name="standard_55">60dp</dimen>
+    <dimen name="standard_105">120dp</dimen>
 </resources>

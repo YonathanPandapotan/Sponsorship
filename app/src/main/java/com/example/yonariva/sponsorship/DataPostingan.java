@@ -11,7 +11,7 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class DataPostingan implements Serializable {
 
-    private String namaPost, tanggal, instansi, alamat, op, jabatan, jenisBantuan, unit, hp, email, id, idUser;
+    private String namaPost, tanggal, instansi, alamat, op, jabatan, jenisBantuan, unit, hp, email, id, idUser, deskripsi;
     private int jumlahGambar;
 
     public DataPostingan(){
@@ -19,7 +19,7 @@ public class DataPostingan implements Serializable {
     }
 
     public DataPostingan(String namaPost, String tanggal, String alamat, String instansi, String op, String jabatan,
-                         String jenisBantuan, String unit, String hp, String email, String id, String idUser) {
+                         String jenisBantuan, String unit, String hp, String email, String id, String idUser, String deskripsi) {
         this.namaPost = namaPost;
         this.tanggal = tanggal;
         this.alamat = alamat;
@@ -32,6 +32,15 @@ public class DataPostingan implements Serializable {
         this.email = email;
         this.id = id;
         this.idUser = idUser;
+        this.deskripsi = deskripsi;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 
     public int getJumlahGambar() {
@@ -154,6 +163,7 @@ public class DataPostingan implements Serializable {
         result.put("id", this.id);
         result.put("idUser", this.idUser);
         result.put("jumlahGambar", this.jumlahGambar);
+        result.put("deskripsi", this.deskripsi);
 
         return result;
     }

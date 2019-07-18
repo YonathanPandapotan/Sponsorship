@@ -52,7 +52,7 @@ public class ActivityBuatAcara extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
 
-    private TextView namaPost, tanggal, instansi, alamat, op, jabatan, jenisBantuan, unit, hp, email;
+    private TextView namaPost, tanggal, instansi, alamat, op, jabatan, jenisBantuan, unit, hp, email, deskripsi;
     private ImageButton addImage;
     private final int PICK_IMAGE_REQUEST = 71;
     private Uri filePath;
@@ -104,6 +104,7 @@ public class ActivityBuatAcara extends AppCompatActivity {
         unit = findViewById(R.id.unit);
         hp = findViewById(R.id.cp);
         email = findViewById(R.id.email);
+        deskripsi = findViewById(R.id.deskripsi);
         uploaded = new ArrayList<>();
         uploadDone = new Boolean(false);
 
@@ -119,7 +120,7 @@ public class ActivityBuatAcara extends AppCompatActivity {
                 post = new DataPostingan(namaPost.getText().toString(), tanggal.getText().toString(), alamat.getText().toString(),
                         instansi.getText().toString(), op.getText().toString(), jabatan.getText().toString(),
                         jenisBantuan.getText().toString(), unit.getText().toString(), hp.getText().toString(), email.getText().toString(), key,
-                        FirebaseUtilities.getUid());
+                        FirebaseUtilities.getUid(), deskripsi.getText().toString());
                 post.setJumlahGambar(uploaded.size());
 
                 Map<String, Object> postValues = post.toMap();
