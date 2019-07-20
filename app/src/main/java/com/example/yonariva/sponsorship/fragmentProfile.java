@@ -80,17 +80,7 @@ public class fragmentProfile extends Fragment {
             }
         });
 
-        database.getReference().child("user").child(FirebaseUtilities.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                userName.setText(Utilities.capitalize(dataSnapshot.child("nama").getValue().toString()));
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        userName.setText(UserPreferences.getUserName(getActivity().getBaseContext()));
 
         FirebaseUtilities.setProfileImage((ImageView) getView().findViewById(R.id.userPic));
 

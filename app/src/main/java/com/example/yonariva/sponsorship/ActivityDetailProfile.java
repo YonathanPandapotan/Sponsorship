@@ -68,7 +68,6 @@ public class ActivityDetailProfile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 baru = dataSnapshot.getValue(DataUser.class);
                 setDataUser();
-
             }
 
             @Override
@@ -92,7 +91,7 @@ public class ActivityDetailProfile extends AppCompatActivity {
         if(baru.getRegistComplete() == false){
             tab.setVisibility(View.GONE);
             warning.setText("Tolong lengkapi data profile anda");
-            username.setText(baru.getNama());
+            username.setText(UserPreferences.getUserName(getBaseContext()));
             email.setText(baru.getEmail());
         }
         else{

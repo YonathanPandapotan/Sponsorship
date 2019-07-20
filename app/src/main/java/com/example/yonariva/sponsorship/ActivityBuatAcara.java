@@ -108,6 +108,8 @@ public class ActivityBuatAcara extends AppCompatActivity {
         uploaded = new ArrayList<>();
         uploadDone = new Boolean(false);
 
+        op.setText(UserPreferences.getUserName(getBaseContext()));
+
         //penyimpanan ke firebase
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

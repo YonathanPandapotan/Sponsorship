@@ -79,6 +79,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginRight="8dp"
+                    android:shadowColor="@color/blackFont"
+                    android:textColor="@color/blackFont"
                     android:text="Membuat Postingan tentang Acara" />
 
                 <android.support.design.widget.FloatingActionButton
@@ -102,6 +104,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginRight="8dp"
+                    android:shadowColor="@color/blackFont"
+                    android:textColor="@color/blackFont"
                     android:text="Membuat Postingan tentang Sponsoran" />
 
                 <android.support.design.widget.FloatingActionButton

@@ -140,8 +140,12 @@ public class fragmentDetailPost extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Map<String,Object> map = new HashMap<String,Object>();
-                    map.put(dataPost.getIdUser()+"and"+FirebaseUtilities.getUid(),"");
+                    map.put(dataPost.getIdUser() + "and" + FirebaseUtilities.getUid(),"");
                     root.updateChildren(map);
+
+                    root.child(dataPost.getIdUser() + "and" + FirebaseUtilities.getUid()).child("info").child(dataPost.getIdUser()).setValue(dataPost.getOp());
+                    root.child(dataPost.getIdUser() + "and" + FirebaseUtilities.getUid()).child("info").child(FirebaseUtilities.getUid()).setValue(UserPreferences.getUserName(getActivity().getBaseContext()));
+
                     Intent I = new Intent(getActivity(), ActivityChatRoom.class);
                     I.putExtra("room_name",dataPost.getIdUser()+"and"+FirebaseUtilities.getUid());
                     startActivity(I);

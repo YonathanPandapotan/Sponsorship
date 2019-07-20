@@ -111,7 +111,7 @@ public class ActivityMainMenu extends AppCompatActivity {
                     break;
                 case R.id.nav_chat:
                     asd.setVisibility(LinearLayout.GONE);
-                    loadFragment(new fragmentChat());
+                    loadFragment(new fragmentChatList());
                     break;
                 case R.id.nav_profile:
 
@@ -136,7 +136,10 @@ public class ActivityMainMenu extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String[] split = dataSnapshot.child("nama").getValue().toString().trim().split("\\s+");
-                username.setText(Utilities.capitalize(split[0]));
+//                username.setText(Utilities.capitalize(split[0]));
+                UserPreferences.setUserName(getBaseContext(), Utilities.capitalize(split[0]));
+                UserPreferences.setUserId(getBaseContext(),FirebaseUtilities.getUid());
+                username.setText(UserPreferences.getUserName(getBaseContext()));
             }
 
             @Override

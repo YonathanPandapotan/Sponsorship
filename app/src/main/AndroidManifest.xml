@@ -22,6 +22,7 @@
         <activity android:name=".ActivityChangePassword" />
         <activity android:name=".ActivityEditProfile" />
         <activity android:name=".ActivityDaftarBaru" />
+        <activity android:name=".ActivityDummy" />
         <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
