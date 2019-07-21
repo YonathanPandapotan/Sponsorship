@@ -1,6 +1,5 @@
 package com.example.yonariva.sponsorship;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class fragmentDetailPost extends Fragment {
+public class fragmentDetailAcara extends Fragment {
 
     private DataPostingan dataPost;
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("chat");
@@ -52,7 +49,7 @@ public class fragmentDetailPost extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_post, container, false);
+        return inflater.inflate(R.layout.fragment_detail_acara, container, false);
     }
 
     @Override
@@ -134,7 +131,6 @@ public class fragmentDetailPost extends Fragment {
             });
         }
         else{
-            instansi.setText("False");
             button.setText("Chat pembuat acara");
             button.setOnClickListener(new View.OnClickListener() {
                 @Override

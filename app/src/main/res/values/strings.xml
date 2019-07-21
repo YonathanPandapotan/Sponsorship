@@ -7,13 +7,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="filterList">
-        <item>Semua</item>
-        <item>Sponsorship</item>
         <item>Acara</item>
-    </string-array>
-    <string-array name="sortList">
-        <item>Hottest</item>
-        <item>Newest</item>
+        <item>Sponsorship</item>
     </string-array>
     <string name="title_activity_post_detail">postDetail</string>
     <string name="title_activity_post">postActivity</string>

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityBuatSponsoran"></activity>
+        <activity android:name=".ActivitySponsoran"></activity>
+        <activity android:name=".ActivityBuatSponsoran" />
         <activity android:name=".ActivityEditAcara" />
         <activity android:name=".ActivityChatRoom" />
         <activity android:name=".ActivityUploadGambarProfile" />

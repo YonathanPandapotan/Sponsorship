@@ -27,24 +27,11 @@
                 android:layout_weight="1"/>
 
             <Spinner
+                android:id="@+id/filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:entries="@array/filterList"></Spinner>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sort By: "
-                android:textSize="6pt"
-                android:layout_weight="1"/>
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/sortList"
-                android:layout_weight="1">
-            </Spinner>
 
         </LinearLayout>
 

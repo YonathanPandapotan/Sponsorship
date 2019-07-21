@@ -81,7 +81,7 @@
                     android:layout_marginRight="8dp"
                     android:shadowColor="@color/blackFont"
                     android:textColor="@color/blackFont"
-                    android:text="Membuat Postingan tentang Acara" />
+                    android:text="Membuat Postingan tentang Sponsoran" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/sponsorFloatButton"
@@ -106,7 +106,7 @@
                     android:layout_marginRight="8dp"
                     android:shadowColor="@color/blackFont"
                     android:textColor="@color/blackFont"
-                    android:text="Membuat Postingan tentang Sponsoran" />
+                    android:text="Membuat Postingan tentang Acara" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/acaraFloatButton"

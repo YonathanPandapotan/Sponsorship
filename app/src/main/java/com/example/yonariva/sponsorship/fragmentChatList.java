@@ -95,15 +95,6 @@ public class fragmentChatList extends Fragment {
                 Intent I = new Intent(getActivity(), ActivityChatRoom.class);
                 I.putExtra("room_name",roomList.get(i));
                 startActivity(I);
-
-//                startActivity(new Intent(getActivity(), ActivityDummy.class));
-
-
-/*
-                Intent I = new Intent(getApplicationContext(),chatroom.class);
-                I.putExtra("room_name",((TextView)view).getText().toString());
-                I.putExtra("user_name",name);
-                startActivity(I);*/
             }
         });
 

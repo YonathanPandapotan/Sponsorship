@@ -92,7 +92,7 @@ public class fragmentMainMenu extends Fragment {
         sponsorFloat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "sponsor pressed", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getActivity(), ActivityBuatSponsoran.class));
             }
         });
 

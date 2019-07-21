@@ -2,17 +2,17 @@ package com.example.yonariva.sponsorship;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -22,7 +22,9 @@ public class ActivityPost extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private DataPostingan dataPost;
+    private DataSponsoran dataSponsoran;
     private Toolbar mToolbar;
+    private String mode;
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
     StorageReference storageRef = FirebaseStorage.getInstance().getReference();
 
@@ -39,15 +41,35 @@ public class ActivityPost extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        dataPost = (DataPostingan) getIntent().getSerializableExtra("post");
+        try {
+            String mode = (String) getIntent().getSerializableExtra("mode");
 
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("post", dataPost);
+            if(mode == null){
+                dataPost = (DataPostingan) getIntent().getSerializableExtra("post");
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("post", dataPost);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment, new fragmentDetailPost());
-        fragmentTransaction.commit();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, new fragmentDetailAcara());
+                fragmentTransaction.commit();
+            }
+            else{
+                this.mode = "sponsoran";
+                Toast.makeText(this, mode, Toast.LENGTH_LONG).show();
+                dataSponsoran = (DataSponsoran) getIntent().getSerializableExtra("sponsoran");
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("post", dataPost);
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, new FragmentDetailSponsoran());
+                fragmentTransaction.commit();
+
+            }
+        }catch(Exception e){
+
+        }
 
         mToolbar = findViewById(R.id.toolbar);
         mToolbar.setTitle("Android Menu Group Example");
@@ -81,14 +103,26 @@ public class ActivityPost extends AppCompatActivity {
     }
 
     public void editPost(){
-        Intent intent = new Intent(ActivityPost.this, ActivityEditAcara.class);
-        intent.putExtra("post", dataPost);
+        if(mode == null){
+            Intent intent = new Intent(ActivityPost.this, ActivityEditAcara.class);
+            intent.putExtra("post", dataPost);
 
-        startActivity(intent);
+            startActivity(intent);
+        }
+        else{
+
+        }
+
     }
 
     public void hapusPost(){
-        ref.child("post").child(dataPost.getId()).removeValue();
+        if(mode == null){
+            ref.child("post").child(dataPost.getId()).removeValue();
+        }
+        else{
+            ref.child("sponsoran").child(dataSponsoran.getId()).removeValue();
+        }
+
         finish();
     }
 
