@@ -94,7 +94,7 @@ public class fragmentFeed extends Fragment implements RecyclerViewAdapter.ItemLi
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Iterator i = dataSnapshot.child("sponsoran").getChildren().iterator();
                 arrayList2.clear();
-                adapter2.notifyDataSetChanged();
+                adapter2.notifyDataSetChanged();;
 
                 while ( i.hasNext())
                 {

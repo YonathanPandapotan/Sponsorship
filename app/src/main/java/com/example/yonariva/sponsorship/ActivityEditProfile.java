@@ -44,6 +44,7 @@ public class ActivityEditProfile extends AppCompatActivity {
         edit.setJabatanUser(jabatanUser.getText().toString());
         edit.setNoHP(noHp.getText().toString());
         edit.setEmail(FirebaseStaticAuthClass.getEmail());
+        edit.setRegistComplete(true);
 
         FirebaseDatabase.getInstance().getReference().child("user").child(edit.getId()).setValue(edit);
 

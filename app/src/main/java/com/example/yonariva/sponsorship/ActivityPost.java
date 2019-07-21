@@ -56,15 +56,17 @@ public class ActivityPost extends AppCompatActivity {
             }
             else{
                 this.mode = "sponsoran";
-                Toast.makeText(this, mode, Toast.LENGTH_LONG).show();
-                dataSponsoran = (DataSponsoran) getIntent().getSerializableExtra("sponsoran");
+                Toast.makeText(this, mode, Toast.LENGTH_SHORT).show();
+                dataSponsoran = (DataSponsoran) getIntent().getSerializableExtra("postSponsoran");
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("post", dataPost);
+                bundle.putSerializable("postSponsoran", dataPost);
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, new FragmentDetailSponsoran());
                 fragmentTransaction.commit();
+
+
 
             }
         }catch(Exception e){
